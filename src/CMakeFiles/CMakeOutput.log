@@ -1,0 +1,323 @@
+The system is: Linux - 3.7.9-101.fc17.i686 - i686
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/gcc 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3600054048/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3600054048.dir/build.make CMakeFiles/cmTryCompileExec3600054048.dir/build
+gmake[1]: Entering directory `/home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3600054048.dir/testCCompiler.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTryCompileExec3600054048.dir/testCCompiler.c.o   -c /home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec3600054048
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3600054048.dir/link.txt --verbose=1
+/usr/bin/gcc         CMakeFiles/cmTryCompileExec3600054048.dir/testCCompiler.c.o  -o cmTryCompileExec3600054048 -rdynamic 
+gmake[1]: Leaving directory `/home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3368984648/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3368984648.dir/build.make CMakeFiles/cmTryCompileExec3368984648.dir/build
+gmake[1]: Entering directory `/home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3368984648.dir/CMakeCCompilerABI.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTryCompileExec3368984648.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec3368984648
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3368984648.dir/link.txt --verbose=1
+/usr/bin/gcc       -v CMakeFiles/cmTryCompileExec3368984648.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec3368984648 -rdynamic  
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/libexec/gcc/i686-redhat-linux/4.7.2/lto-wrapper
+Target: i686-redhat-linux
+Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --disable-build-with-cxx --disable-build-poststage1-with-cxx --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-languages=c,c++,objc,obj-c++,java,fortran,ada,go,lto --enable-plugin --enable-initfini-array --enable-java-awt=gtk --disable-dssi --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-1.5.0.0/jre --enable-libgcj-multifile --enable-java-maintainer-mode --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --disable-libjava-multilib --with-ppl --with-cloog --with-tune=generic --with-arch=i686 --build=i686-redhat-linux
+Thread model: posix
+gcc version 4.7.2 20120921 (Red Hat 4.7.2-2) (GCC) 
+COMPILER_PATH=/usr/libexec/gcc/i686-redhat-linux/4.7.2/:/usr/libexec/gcc/i686-redhat-linux/4.7.2/:/usr/libexec/gcc/i686-redhat-linux/:/usr/lib/gcc/i686-redhat-linux/4.7.2/:/usr/lib/gcc/i686-redhat-linux/
+LIBRARY_PATH=/usr/lib/gcc/i686-redhat-linux/4.7.2/:/usr/lib/gcc/i686-redhat-linux/4.7.2/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec3368984648' '-rdynamic' '-mtune=generic' '-march=i686'
+ /usr/libexec/gcc/i686-redhat-linux/4.7.2/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_i386 -export-dynamic -dynamic-linker /lib/ld-linux.so.2 -o cmTryCompileExec3368984648 /usr/lib/gcc/i686-redhat-linux/4.7.2/../../../crt1.o /usr/lib/gcc/i686-redhat-linux/4.7.2/../../../crti.o /usr/lib/gcc/i686-redhat-linux/4.7.2/crtbegin.o -L/usr/lib/gcc/i686-redhat-linux/4.7.2 -L/usr/lib/gcc/i686-redhat-linux/4.7.2/../../.. CMakeFiles/cmTryCompileExec3368984648.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/i686-redhat-linux/4.7.2/crtend.o /usr/lib/gcc/i686-redhat-linux/4.7.2/../../../crtn.o
+gmake[1]: Leaving directory `/home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:/usr/bin/gmake "cmTryCompileExec3368984648/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3368984648.dir/build.make CMakeFiles/cmTryCompileExec3368984648.dir/build]
+  ignore line: [gmake[1]: Entering directory `/home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/cmake -E cmake_progress_report /home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec3368984648.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/gcc    -o CMakeFiles/cmTryCompileExec3368984648.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec3368984648]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3368984648.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/gcc       -v CMakeFiles/cmTryCompileExec3368984648.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec3368984648 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/i686-redhat-linux/4.7.2/lto-wrapper]
+  ignore line: [Target: i686-redhat-linux]
+  ignore line: [Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --disable-build-with-cxx --disable-build-poststage1-with-cxx --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-languages=c,c++,objc,obj-c++,java,fortran,ada,go,lto --enable-plugin --enable-initfini-array --enable-java-awt=gtk --disable-dssi --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-1.5.0.0/jre --enable-libgcj-multifile --enable-java-maintainer-mode --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --disable-libjava-multilib --with-ppl --with-cloog --with-tune=generic --with-arch=i686 --build=i686-redhat-linux]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 4.7.2 20120921 (Red Hat 4.7.2-2) (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/libexec/gcc/i686-redhat-linux/4.7.2/:/usr/libexec/gcc/i686-redhat-linux/4.7.2/:/usr/libexec/gcc/i686-redhat-linux/:/usr/lib/gcc/i686-redhat-linux/4.7.2/:/usr/lib/gcc/i686-redhat-linux/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/i686-redhat-linux/4.7.2/:/usr/lib/gcc/i686-redhat-linux/4.7.2/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec3368984648' '-rdynamic' '-mtune=generic' '-march=i686']
+  link line: [ /usr/libexec/gcc/i686-redhat-linux/4.7.2/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_i386 -export-dynamic -dynamic-linker /lib/ld-linux.so.2 -o cmTryCompileExec3368984648 /usr/lib/gcc/i686-redhat-linux/4.7.2/../../../crt1.o /usr/lib/gcc/i686-redhat-linux/4.7.2/../../../crti.o /usr/lib/gcc/i686-redhat-linux/4.7.2/crtbegin.o -L/usr/lib/gcc/i686-redhat-linux/4.7.2 -L/usr/lib/gcc/i686-redhat-linux/4.7.2/../../.. CMakeFiles/cmTryCompileExec3368984648.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/i686-redhat-linux/4.7.2/crtend.o /usr/lib/gcc/i686-redhat-linux/4.7.2/../../../crtn.o]
+    arg [/usr/libexec/gcc/i686-redhat-linux/4.7.2/collect2] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--no-add-needed] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_i386] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec3368984648] ==> ignore
+    arg [/usr/lib/gcc/i686-redhat-linux/4.7.2/../../../crt1.o] ==> ignore
+    arg [/usr/lib/gcc/i686-redhat-linux/4.7.2/../../../crti.o] ==> ignore
+    arg [/usr/lib/gcc/i686-redhat-linux/4.7.2/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/i686-redhat-linux/4.7.2] ==> dir [/usr/lib/gcc/i686-redhat-linux/4.7.2]
+    arg [-L/usr/lib/gcc/i686-redhat-linux/4.7.2/../../..] ==> dir [/usr/lib/gcc/i686-redhat-linux/4.7.2/../../..]
+    arg [CMakeFiles/cmTryCompileExec3368984648.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/gcc/i686-redhat-linux/4.7.2/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/i686-redhat-linux/4.7.2/../../../crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse dir [/usr/lib/gcc/i686-redhat-linux/4.7.2] ==> [/usr/lib/gcc/i686-redhat-linux/4.7.2]
+  collapse dir [/usr/lib/gcc/i686-redhat-linux/4.7.2/../../..] ==> [/usr/lib]
+  implicit libs: [c]
+  implicit dirs: [/usr/lib/gcc/i686-redhat-linux/4.7.2;/usr/lib]
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1945073820/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1945073820.dir/build.make CMakeFiles/cmTryCompileExec1945073820.dir/build
+gmake[1]: Entering directory `/home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1945073820.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec1945073820.dir/testCXXCompiler.cxx.o -c /home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTryCompileExec1945073820
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1945073820.dir/link.txt --verbose=1
+/usr/bin/c++          CMakeFiles/cmTryCompileExec1945073820.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec1945073820 -rdynamic 
+gmake[1]: Leaving directory `/home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec4244257266/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec4244257266.dir/build.make CMakeFiles/cmTryCompileExec4244257266.dir/build
+gmake[1]: Entering directory `/home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec4244257266.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec4244257266.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTryCompileExec4244257266
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4244257266.dir/link.txt --verbose=1
+/usr/bin/c++        -v CMakeFiles/cmTryCompileExec4244257266.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec4244257266 -rdynamic  
+Using built-in specs.
+COLLECT_GCC=/usr/bin/c++
+COLLECT_LTO_WRAPPER=/usr/libexec/gcc/i686-redhat-linux/4.7.2/lto-wrapper
+Target: i686-redhat-linux
+Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --disable-build-with-cxx --disable-build-poststage1-with-cxx --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-languages=c,c++,objc,obj-c++,java,fortran,ada,go,lto --enable-plugin --enable-initfini-array --enable-java-awt=gtk --disable-dssi --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-1.5.0.0/jre --enable-libgcj-multifile --enable-java-maintainer-mode --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --disable-libjava-multilib --with-ppl --with-cloog --with-tune=generic --with-arch=i686 --build=i686-redhat-linux
+Thread model: posix
+gcc version 4.7.2 20120921 (Red Hat 4.7.2-2) (GCC) 
+COMPILER_PATH=/usr/libexec/gcc/i686-redhat-linux/4.7.2/:/usr/libexec/gcc/i686-redhat-linux/4.7.2/:/usr/libexec/gcc/i686-redhat-linux/:/usr/lib/gcc/i686-redhat-linux/4.7.2/:/usr/lib/gcc/i686-redhat-linux/
+LIBRARY_PATH=/usr/lib/gcc/i686-redhat-linux/4.7.2/:/usr/lib/gcc/i686-redhat-linux/4.7.2/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec4244257266' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=i686'
+ /usr/libexec/gcc/i686-redhat-linux/4.7.2/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_i386 -export-dynamic -dynamic-linker /lib/ld-linux.so.2 -o cmTryCompileExec4244257266 /usr/lib/gcc/i686-redhat-linux/4.7.2/../../../crt1.o /usr/lib/gcc/i686-redhat-linux/4.7.2/../../../crti.o /usr/lib/gcc/i686-redhat-linux/4.7.2/crtbegin.o -L/usr/lib/gcc/i686-redhat-linux/4.7.2 -L/usr/lib/gcc/i686-redhat-linux/4.7.2/../../.. CMakeFiles/cmTryCompileExec4244257266.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/i686-redhat-linux/4.7.2/crtend.o /usr/lib/gcc/i686-redhat-linux/4.7.2/../../../crtn.o
+gmake[1]: Leaving directory `/home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:/usr/bin/gmake "cmTryCompileExec4244257266/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTryCompileExec4244257266.dir/build.make CMakeFiles/cmTryCompileExec4244257266.dir/build]
+  ignore line: [gmake[1]: Entering directory `/home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/cmake -E cmake_progress_report /home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec4244257266.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTryCompileExec4244257266.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTryCompileExec4244257266]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4244257266.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++        -v CMakeFiles/cmTryCompileExec4244257266.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec4244257266 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/c++]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/i686-redhat-linux/4.7.2/lto-wrapper]
+  ignore line: [Target: i686-redhat-linux]
+  ignore line: [Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --disable-build-with-cxx --disable-build-poststage1-with-cxx --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-languages=c,c++,objc,obj-c++,java,fortran,ada,go,lto --enable-plugin --enable-initfini-array --enable-java-awt=gtk --disable-dssi --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-1.5.0.0/jre --enable-libgcj-multifile --enable-java-maintainer-mode --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --disable-libjava-multilib --with-ppl --with-cloog --with-tune=generic --with-arch=i686 --build=i686-redhat-linux]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 4.7.2 20120921 (Red Hat 4.7.2-2) (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/libexec/gcc/i686-redhat-linux/4.7.2/:/usr/libexec/gcc/i686-redhat-linux/4.7.2/:/usr/libexec/gcc/i686-redhat-linux/:/usr/lib/gcc/i686-redhat-linux/4.7.2/:/usr/lib/gcc/i686-redhat-linux/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/i686-redhat-linux/4.7.2/:/usr/lib/gcc/i686-redhat-linux/4.7.2/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec4244257266' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=i686']
+  link line: [ /usr/libexec/gcc/i686-redhat-linux/4.7.2/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_i386 -export-dynamic -dynamic-linker /lib/ld-linux.so.2 -o cmTryCompileExec4244257266 /usr/lib/gcc/i686-redhat-linux/4.7.2/../../../crt1.o /usr/lib/gcc/i686-redhat-linux/4.7.2/../../../crti.o /usr/lib/gcc/i686-redhat-linux/4.7.2/crtbegin.o -L/usr/lib/gcc/i686-redhat-linux/4.7.2 -L/usr/lib/gcc/i686-redhat-linux/4.7.2/../../.. CMakeFiles/cmTryCompileExec4244257266.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/i686-redhat-linux/4.7.2/crtend.o /usr/lib/gcc/i686-redhat-linux/4.7.2/../../../crtn.o]
+    arg [/usr/libexec/gcc/i686-redhat-linux/4.7.2/collect2] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--no-add-needed] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_i386] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec4244257266] ==> ignore
+    arg [/usr/lib/gcc/i686-redhat-linux/4.7.2/../../../crt1.o] ==> ignore
+    arg [/usr/lib/gcc/i686-redhat-linux/4.7.2/../../../crti.o] ==> ignore
+    arg [/usr/lib/gcc/i686-redhat-linux/4.7.2/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/i686-redhat-linux/4.7.2] ==> dir [/usr/lib/gcc/i686-redhat-linux/4.7.2]
+    arg [-L/usr/lib/gcc/i686-redhat-linux/4.7.2/../../..] ==> dir [/usr/lib/gcc/i686-redhat-linux/4.7.2/../../..]
+    arg [CMakeFiles/cmTryCompileExec4244257266.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/lib/gcc/i686-redhat-linux/4.7.2/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/i686-redhat-linux/4.7.2/../../../crtn.o] ==> ignore
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  collapse dir [/usr/lib/gcc/i686-redhat-linux/4.7.2] ==> [/usr/lib/gcc/i686-redhat-linux/4.7.2]
+  collapse dir [/usr/lib/gcc/i686-redhat-linux/4.7.2/../../..] ==> [/usr/lib]
+  implicit libs: [stdc++;m;c]
+  implicit dirs: [/usr/lib/gcc/i686-redhat-linux/4.7.2;/usr/lib]
+
+
+Determining if the function XOpenDisplay exists in the /usr/lib/libX11.so;/usr/lib/libXext.so passed with the following output:
+Change Dir: /home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3225249279/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3225249279.dir/build.make CMakeFiles/cmTryCompileExec3225249279.dir/build
+gmake[1]: Entering directory `/home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3225249279.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTryCompileExec3225249279.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3225249279
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3225249279.dir/link.txt --verbose=1
+/usr/bin/gcc     -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTryCompileExec3225249279.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3225249279 -rdynamic -lX11 -lXext 
+gmake[1]: Leaving directory `/home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp'
+
+
+Determining if the function gethostbyname exists passed with the following output:
+Change Dir: /home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3252652395/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3252652395.dir/build.make CMakeFiles/cmTryCompileExec3252652395.dir/build
+gmake[1]: Entering directory `/home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3252652395.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTryCompileExec3252652395.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3252652395
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3252652395.dir/link.txt --verbose=1
+/usr/bin/gcc     -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTryCompileExec3252652395.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3252652395 -rdynamic 
+gmake[1]: Leaving directory `/home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp'
+
+
+Determining if the function connect exists passed with the following output:
+Change Dir: /home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3764467979/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3764467979.dir/build.make CMakeFiles/cmTryCompileExec3764467979.dir/build
+gmake[1]: Entering directory `/home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3764467979.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTryCompileExec3764467979.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3764467979
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3764467979.dir/link.txt --verbose=1
+/usr/bin/gcc     -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTryCompileExec3764467979.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3764467979 -rdynamic 
+gmake[1]: Leaving directory `/home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp'
+
+
+Determining if the function remove exists passed with the following output:
+Change Dir: /home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2343006322/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2343006322.dir/build.make CMakeFiles/cmTryCompileExec2343006322.dir/build
+gmake[1]: Entering directory `/home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2343006322.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTryCompileExec2343006322.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2343006322
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2343006322.dir/link.txt --verbose=1
+/usr/bin/gcc     -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTryCompileExec2343006322.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2343006322 -rdynamic 
+gmake[1]: Leaving directory `/home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp'
+
+
+Determining if the function shmat exists passed with the following output:
+Change Dir: /home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec177307381/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec177307381.dir/build.make CMakeFiles/cmTryCompileExec177307381.dir/build
+gmake[1]: Entering directory `/home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec177307381.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTryCompileExec177307381.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec177307381
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec177307381.dir/link.txt --verbose=1
+/usr/bin/gcc     -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTryCompileExec177307381.dir/CheckFunctionExists.c.o  -o cmTryCompileExec177307381 -rdynamic 
+gmake[1]: Leaving directory `/home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp'
+
+
+Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
+Change Dir: /home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1522783994/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1522783994.dir/build.make CMakeFiles/cmTryCompileExec1522783994.dir/build
+gmake[1]: Entering directory `/home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1522783994.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTryCompileExec1522783994.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1522783994
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1522783994.dir/link.txt --verbose=1
+/usr/bin/gcc     -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTryCompileExec1522783994.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1522783994 -rdynamic -lICE 
+gmake[1]: Leaving directory `/home/vfrenkel/ACADEMIC/computer_graphics/hw2_fk_ik/src/CMakeFiles/CMakeTmp'
+
+

@@ -1,0 +1,1 @@
+/usr/bin/c++   -O3 -DNDEBUG    CMakeFiles/pa1.dir/main.cpp.o  -o pa1 -rdynamic /usr/local/lib/libglut.so -lXmu -lXi -lGLU -lGL -lSM -lICE -lX11 -lXext -Wl,-rpath,/usr/local/lib 
