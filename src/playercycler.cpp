@@ -108,14 +108,15 @@ void PlayerCycler::render() {
 
   // rotate the light position based on player rotation...
   Eigen::Matrix4f rot_mat_y = Eigen::Matrix4f::Identity();
-  rot_mat_y(0,0) = cos(lrot[1] * PI / 180);
-  rot_mat_y(0,2) = sin(lrot[1] * PI / 180);
-  rot_mat_y(2,0) = -sin(lrot[1] * PI / 180);
-  rot_mat_y(2,2) = cos(lrot[1] * PI / 180);
+  rot_mat_y(0,0) = cos(-lrot[1] * PI / 180);
+  rot_mat_y(0,2) = sin(-lrot[1] * PI / 180);
+  rot_mat_y(2,0) = -sin(-lrot[1] * PI / 180);
+  rot_mat_y(2,2) = cos(-lrot[1] * PI / 180);
 
   std::cout << "rot_mat_y: \n" << rot_mat_y << std::endl;
 
   Eigen::Vector4f lposT = rot_mat_y * light->pos;
+  //Eigen::Vector4f lposT = light->pos;
 
   // TODO: make these take in Eigen's vectors, use overloaded function defs.
   this->main_shader->set_uniform_3f("lightDir", lposT[0], lposT[1], lposT[2]);
