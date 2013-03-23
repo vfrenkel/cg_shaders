@@ -29,7 +29,7 @@ void vf_scene_000(Scene *s) {
 
   s->add_node(new PointLight(s,
 			     1.0f,
-			     Eigen::Vector4f(0.0, 200.0, 0.0, 1.0),
+			     Eigen::Vector4f(200.0, 200.0, 0.0, 1.0),
 			     Eigen::Vector4f(0.0, 0.0, 0.0, 0.0)));
 
   // THE GRID
@@ -151,6 +151,10 @@ void Scene::step_and_render() {
     glPushMatrix();
     (*n)->render();
     glPopMatrix();
+  }
+
+  for (std::vector<SceneNode *>::iterator n = this->lights.begin(); n != this->lights.end(); n++) {
+    (*n)->step();
   }
 
   glutSwapBuffers();
