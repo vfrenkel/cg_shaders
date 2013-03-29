@@ -35,7 +35,7 @@ void init() {
   glClearAccum(0.0,0.0,0.0,1.0);
   glClear(GL_ACCUM_BUFFER_BIT);
 
-  glShadeModel(GL_SMOOTH);
+  //glShadeModel(GL_SMOOTH);
   glEnable(GL_LINE_SMOOTH);
   glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);
   glEnable(GL_BLEND);

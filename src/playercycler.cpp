@@ -14,12 +14,13 @@ PlayerCycler::PlayerCycler(Scene *scene, Eigen::Vector4f pos, Eigen::Vector4f ro
   // use rotation to calculate initial forward facing direction on the xz plane.
   this->forward_dir = Eigen::Vector2f(0.0, 1.0);
 
-  this->model = load_model("test_objs/Monkey.obj", "NA");
+  this->model = load_model("test_objs/tron.obj", "NA");
   this->model.vbo_ids = new GLuint[3];
 
   prep_buffers(this->model);
 
-  this->main_shader = new GLSLProgram("shaders/toon.vert", "shaders/toon.frag");
+  // make a shader field for each type of shader, switch between them using sticky keys.
+  this->main_shader = new GLSLProgram("shaders/gouraud.vert", "shaders/gouraud.frag");
 }
 
 void PlayerCycler::step() {
@@ -113,16 +114,19 @@ void PlayerCycler::render() {
   rot_mat_y(2,0) = -sin(-lrot[1] * PI / 180);
   rot_mat_y(2,2) = cos(-lrot[1] * PI / 180);
 
-  std::cout << "rot_mat_y: \n" << rot_mat_y << std::endl;
+  //std::cout << "rot_mat_y: \n" << rot_mat_y << std::endl;
 
-  Eigen::Vector4f lposT = rot_mat_y * light->pos;
-  //Eigen::Vector4f lposT = light->pos;
+  //Eigen::Vector4f lposT = rot_mat_y * light->pos;
+  Eigen::Vector4f lightDir = -light->pos;
+  lightDir[3] = 0;
+  //std::cout << "lightDir:\n" << lightDir << std::endl;
 
   // TODO: make these take in Eigen's vectors, use overloaded function defs.
-  this->main_shader->set_uniform_3f("lightDir", lposT[0], lposT[1], lposT[2]);
+  //this->main_shader->set_uniform_4f("lightDir", lightDir[0], lightDir[1], lightDir[2], lightDir[3]);
   
   glPushMatrix();
-  draw_model(this->model);
+  //draw_model(this->model);
+  glutSolidSphere(5.0f, 4, 4);
   glPopMatrix();
   
   this->main_shader->disable();

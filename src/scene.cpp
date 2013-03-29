@@ -8,7 +8,6 @@
 #include "pointlight.h"
 
 
-// sets up the simple 5 joint chain FK scene.
 void vf_scene_000(Scene *s) {
   PlayerCycler *player = new PlayerCycler(s, Eigen::Vector4f(0.0, 1.0, 0.0, 1.0));
   s->add_node(player);
@@ -21,15 +20,16 @@ void vf_scene_000(Scene *s) {
   float l0_ambient[4] = { 0.0f, 0.0f, 0.0f, 1.0f };
   glLightfv(GL_LIGHT0, GL_AMBIENT, l0_ambient);
   glLightfv(GL_LIGHT0, GL_DIFFUSE, l0_diffuse);
-  float l0_pos[3] = {0.0, 100.0, 0.0};
-  glLightfv(GL_LIGHT0, GL_POSITION, l0_pos);
+  
+  // define position here but apply glLightfv on position after setting camera.
+  float l0_pos[3] = {10.0, 10.0, 0.0};
 
   float l0_specular[4] = { 0.5f, 0.5f, 0.5f, 1.0f };
   glLightfv(GL_LIGHT0, GL_SPECULAR, l0_specular);
 
   s->add_node(new PointLight(s,
 			     1.0f,
-			     Eigen::Vector4f(200.0, 200.0, 0.0, 1.0),
+			     Eigen::Vector4f(l0_pos[0], l0_pos[1], l0_pos[2], 1.0),
 			     Eigen::Vector4f(0.0, 0.0, 0.0, 0.0)));
 
   // THE GRID
@@ -144,6 +144,14 @@ void Scene::step_and_render() {
   // render camera
   this->cam->step();
   this->cam->transform_GL();
+
+  // position lights
+  //TODO: replace with loop that goes through all lights and sets appropriate GL_LIGHT#
+  float l0_pos[3];
+  l0_pos[0] = this->lights[0]->pos[0];
+  l0_pos[1] = this->lights[0]->pos[1];
+  l0_pos[2] = this->lights[0]->pos[2];
+  glLightfv(GL_LIGHT0, GL_POSITION, l0_pos);
 
   for (std::vector<SceneNode *>::iterator n = this->objects.begin(); n != this->objects.end(); n++) {
     (*n)->step();
