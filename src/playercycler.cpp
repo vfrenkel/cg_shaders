@@ -102,7 +102,7 @@ void PlayerCycler::render() {
   
   // set up material properties.
   GLfloat white_specular[] = {1.0, 1.0, 1.0};
-  GLfloat shininess[] = {128};
+  GLfloat shininess[] = {50};
   glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, white_specular);
   glMaterialfv(GL_FRONT_AND_BACK, GL_SHININESS, shininess);
 
@@ -110,13 +110,14 @@ void PlayerCycler::render() {
   this->main_shader->enable();
   
   glPushMatrix();
-  //draw_model(this->model);
-  glutSolidSphere(5.0f, 10, 10);
+  draw_model(this->model);
+  //glutSolidSphere(5.0f, 10, 10);
   glPopMatrix();
   
   this->main_shader->disable();
 
   //TODO: reset material properties back to their defaults.
+
 }
 
 
