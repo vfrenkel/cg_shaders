@@ -6,6 +6,8 @@ type 'make' to compile and run. NOTE: code MUST be run on clic-lab.cs.columbia.e
 BIKE CONTROLS: W,A,S,D for movement/banking. press and hold 'o' key to use the follow cam, let go for the throwing cam.
 
 Sources/Credits:
+	Looked through lighthouse3d tutorials on glsl and lighting, directional lights.
+
 	Used turbosquid for the tron bike model, by japrogramer.
 	Swiftless tutorials, opengl documentation, opengl wikibooks
 

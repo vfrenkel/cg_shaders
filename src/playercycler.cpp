@@ -100,36 +100,23 @@ void PlayerCycler::render() {
   //glRotatef(this->rot[0], 1.0, 0.0, 0.0);
   glRotatef(this->rot[2], 0.0, 0.0, 1.0);
   
+  // set up material properties.
+  GLfloat white_specular[] = {1.0, 1.0, 1.0};
+  GLfloat shininess[] = {128};
+  glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, white_specular);
+  glMaterialfv(GL_FRONT_AND_BACK, GL_SHININESS, shininess);
+
   // use program.
   this->main_shader->enable();
-  // TODO: implement some checks on the light sources to make sure they are 
-  // there and logic to handle the case when they're not.
-  SceneNode *light = this->scene->lights[0];
-  Eigen::Vector4f lrot = this->rot;
-
-  // rotate the light position based on player rotation...
-  Eigen::Matrix4f rot_mat_y = Eigen::Matrix4f::Identity();
-  rot_mat_y(0,0) = cos(-lrot[1] * PI / 180);
-  rot_mat_y(0,2) = sin(-lrot[1] * PI / 180);
-  rot_mat_y(2,0) = -sin(-lrot[1] * PI / 180);
-  rot_mat_y(2,2) = cos(-lrot[1] * PI / 180);
-
-  //std::cout << "rot_mat_y: \n" << rot_mat_y << std::endl;
-
-  //Eigen::Vector4f lposT = rot_mat_y * light->pos;
-  Eigen::Vector4f lightDir = -light->pos;
-  lightDir[3] = 0;
-  //std::cout << "lightDir:\n" << lightDir << std::endl;
-
-  // TODO: make these take in Eigen's vectors, use overloaded function defs.
-  //this->main_shader->set_uniform_4f("lightDir", lightDir[0], lightDir[1], lightDir[2], lightDir[3]);
   
   glPushMatrix();
   //draw_model(this->model);
-  glutSolidSphere(5.0f, 4, 4);
+  glutSolidSphere(5.0f, 10, 10);
   glPopMatrix();
   
   this->main_shader->disable();
+
+  //TODO: reset material properties back to their defaults.
 }
 
 

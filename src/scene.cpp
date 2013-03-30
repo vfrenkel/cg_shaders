@@ -24,7 +24,7 @@ void vf_scene_000(Scene *s) {
   // define position here but apply glLightfv on position after setting camera.
   float l0_pos[3] = {10.0, 10.0, 0.0};
 
-  float l0_specular[4] = { 0.5f, 0.5f, 0.5f, 1.0f };
+  float l0_specular[4] = { 1.0f, 1.0f, 1.0f, 1.0f };
   glLightfv(GL_LIGHT0, GL_SPECULAR, l0_specular);
 
   s->add_node(new PointLight(s,
