@@ -70,7 +70,8 @@ class GLSLProgram
             glUseProgram(0);
         }
 
-        /*
+        void load_texture(const char* filename);
+    	/*
          * bind texture with the given name
          * \param uint the ID of the texture when using multi-texture
          */

@@ -85,6 +85,19 @@ GLuint GLSLProgram::compile_program(
     return program;
 }
 
+void GLSLProgram::load_texture(const char* filename) {
+    GLuint texture;
+    unsigned char * data;
+    FILE * file;
+    
+    //The following code will read in our RAW file
+    file = fopen( filename, “rb” );
+    if ( file == NULL ) return 0;
+    data = (unsigned char *)malloc( width * height * 3 );
+    fread( data, width * height * 3, 1, file );
+    fclose( file );
+}
+
 void GLSLProgram::bind_texture(const char* name, GLuint tex, GLenum target, GLint uint)
 {
     GLint loc = glGetUniformLocation(prog_, name);
