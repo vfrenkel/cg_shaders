@@ -121,6 +121,6 @@ void GLSLProgram::set_uniform_3f(const char* name, GLfloat x, GLfloat y, GLfloat
 void GLSLProgram::set_uniform_4f(const char* name, GLfloat x, GLfloat y, GLfloat z, GLfloat w)
 {
     GLint loc = glGetUniformLocation(prog_, name);
-    assert(loc >= 0);
+    //assert(loc >= 0);
     glUniform4f(loc, x, y, z, w);
 }
