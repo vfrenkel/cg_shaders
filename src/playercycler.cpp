@@ -123,11 +123,10 @@ void PlayerCycler::render() {
   disable_chosen_shader(this->scene, this);
 
   //TODO: reset material properties back to their defaults.
-
 }
 
 void enable_chosen_shader(Scene *s, PlayerCycler *n) {
-  if (s->sticky_key_states['0']) {
+  if (s->sticky_key_states['0']) { 
     n->toon_shader->enable();
   } else if (s->sticky_key_states['1']) {
     Eigen::Vector4f cam_pos = s->get_cam()->pos;
