@@ -117,7 +117,7 @@ void PlayerCycler::render() {
   
   glPushMatrix();
   //draw_model(this->model);
-  glutSolidSphere(5.0f, 10, 10);
+  glutSolidSphere(5.0f, 30, 30);
   glPopMatrix();
   
   disable_chosen_shader(this->scene, this);
