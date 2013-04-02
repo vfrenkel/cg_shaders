@@ -19,8 +19,12 @@ PlayerCycler::PlayerCycler(Scene *scene, Eigen::Vector4f pos, Eigen::Vector4f ro
 
   prep_buffers(this->model);
 
-  // make a shader field for each type of shader, switch between them using sticky keys.
-  this->main_shader = new GLSLProgram("shaders/gouraud.vert", "shaders/gouraud.frag");
+  // TODO: make a shader field for each type of shader, switch between them using sticky keys.
+  this->toon_shader = new GLSLProgram("shaders/toon.vert", "shaders/toon.frag");
+  this->gouraud_phong_shader = new GLSLProgram("shaders/gouraud.vert", "shaders/gouraud.frag");
+  this->blinn_phong_shader = new GLSLProgram("shaders/blinn_phong.vert", "shaders/blinn_phong.frag");
+  
+
 }
 
 void PlayerCycler::step() {
@@ -71,7 +75,6 @@ void PlayerCycler::step() {
     + this->forward_dir[1] * cos(tadr);
 
   // normalize forward_dir floating point roundoff causes drift towards zero vector.
-  //TODO: REVAMP ENGINE TO USE GLM VECs or at least GLfloats instead of float/float.
   normalize2L(forward_dir);
 
   if (this->scene->key_states['a']) {
@@ -91,6 +94,9 @@ void PlayerCycler::step() {
   }
 }
 
+void enable_chosen_shader(Scene *s, PlayerCycler *n);
+void disable_chosen_shader(Scene *s, PlayerCycler *n);
+
 void PlayerCycler::render() {
   glTranslatef(this->pos[0], this->pos[1], this->pos[2]);
 
@@ -107,17 +113,39 @@ void PlayerCycler::render() {
   glMaterialfv(GL_FRONT_AND_BACK, GL_SHININESS, shininess);
 
   // use program.
-  this->main_shader->enable();
+  enable_chosen_shader(this->scene, this);
   
   glPushMatrix();
-  draw_model(this->model);
-  //glutSolidSphere(5.0f, 10, 10);
+  //draw_model(this->model);
+  glutSolidSphere(5.0f, 10, 10);
   glPopMatrix();
   
-  this->main_shader->disable();
+  disable_chosen_shader(this->scene, this);
 
   //TODO: reset material properties back to their defaults.
 
+}
+
+void enable_chosen_shader(Scene *s, PlayerCycler *n) {
+  if (s->sticky_key_states['0']) {
+    n->toon_shader->enable();
+  } else if (s->sticky_key_states['1']) {
+    Eigen::Vector4f cam_pos = s->get_cam()->pos;
+    n->gouraud_phong_shader->set_uniform_4f("cam_pos", cam_pos[0], cam_pos[1], cam_pos[2], cam_pos[3]);
+    n->gouraud_phong_shader->enable();
+  } else if (s->sticky_key_states['2']) {
+    n->blinn_phong_shader->enable();
+  }
+}
+
+void disable_chosen_shader(Scene *s, PlayerCycler *n) {
+  if (s->sticky_key_states['0']) {
+    n->toon_shader->disable();
+  } else if (s->sticky_key_states['1']) {
+    n->gouraud_phong_shader->disable();
+  } else if (s->sticky_key_states['2']) {
+    n->blinn_phong_shader->disable();
+  }
 }
 
 

@@ -8,10 +8,13 @@
 class PlayerCycler : public SceneNode {
 private:
   Model model;
-  GLSLProgram *main_shader;
-
+  
 public:
   Eigen::Vector2f forward_dir;
+
+  GLSLProgram *toon_shader;
+  GLSLProgram *blinn_phong_shader;
+  GLSLProgram *gouraud_phong_shader;
 
   PlayerCycler( Scene *scene,
 	        Eigen::Vector4f pos = Eigen::Vector4f(0.0,0.0,0.0,1.0),
