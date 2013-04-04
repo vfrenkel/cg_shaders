@@ -1,6 +1,25 @@
 Victor Frenkel
 Computer Graphics HW3
 
+--------------------------
+WARNING: as of 10:30 AM, April 4th 2013, the clic-lab computers can't compile glsl shaders. I tried running the unaltered starter code and this error was given:
+
+MSG: Initialize GLSL Shaders ...
+Error: shader(0001), Info Log: �        8�J
+Fail to compile vertex shader:
+varying vec3 normal; 
+ void main() 
+ { 
+ normal = gl_Normal; 
+ gl_Position = ftransform(); 
+ } 
+
+Fail to create GLSL program
+
+The same thing happened with my shaders, but not when I ran them on my computer.
+--------------------------
+
+INSTRUCTIONS:
 type 'make' to compile and run. NOTE: code MUST be run on clic-lab.cs.columbia.edu, not clic.cs.columbia.edu. The configurations are different.
 
 CONTROLS: W,A,S,D for movement/banking. press and hold 'o' key to use the follow cam, let go for the throwing cam.
