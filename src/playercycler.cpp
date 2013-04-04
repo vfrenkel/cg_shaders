@@ -23,8 +23,10 @@ PlayerCycler::PlayerCycler(Scene *scene, Eigen::Vector4f pos, Eigen::Vector4f ro
   this->toon_shader = new GLSLProgram("shaders/toon.vert", "shaders/toon.frag");
   this->gouraud_phong_shader = new GLSLProgram("shaders/gouraud.vert", "shaders/gouraud.frag");
   this->blinn_phong_shader = new GLSLProgram("shaders/blinn_phong.vert", "shaders/blinn_phong.frag");
-  
-
+  this->normal_map_shader = new GLSLProgram("shaders/normal_map.vert", "shaders/normal_map.frag");
+  this->normal_map_shader->load_texture("textures/normalmap.jpg");
+  this->checkerboard_shader = new GLSLProgram("shaders/checkerboard.vert", "shaders/checkerboard.frag");
+  this->uv_checkerboard_shader = new GLSLProgram("shaders/uv_checkerboard.vert", "shaders/uv_checkerboard.frag");
 }
 
 void PlayerCycler::step() {
@@ -117,7 +119,10 @@ void PlayerCycler::render() {
   
   glPushMatrix();
   //draw_model(this->model);
-  glutSolidSphere(5.0f, 30, 30);
+  //glutSolidSphere(5.0f, 30, 30);
+  glutSolidTeapot(5.0f);
+  //glutSolidCube(5.0f);
+  //glutSolidTorus(5.0f, 10, 10, 10);
   glPopMatrix();
   
   disable_chosen_shader(this->scene, this);
@@ -134,6 +139,13 @@ void enable_chosen_shader(Scene *s, PlayerCycler *n) {
     n->gouraud_phong_shader->enable();
   } else if (s->sticky_key_states['2']) {
     n->blinn_phong_shader->enable();
+  } else if (s->sticky_key_states['3']) {
+    n->normal_map_shader->bind_texture(GL_TEXTURE_2D, 0);
+    n->normal_map_shader->enable();
+  } else if (s->sticky_key_states['4']) {
+    n->checkerboard_shader->enable();
+  } else if (s->sticky_key_states['5']) {
+    n->uv_checkerboard_shader->enable();
   }
 }
 
@@ -144,6 +156,13 @@ void disable_chosen_shader(Scene *s, PlayerCycler *n) {
     n->gouraud_phong_shader->disable();
   } else if (s->sticky_key_states['2']) {
     n->blinn_phong_shader->disable();
+  } else if (s->sticky_key_states['3']) {
+    n->normal_map_shader->disable();
+    glBindTexture(GL_TEXTURE_2D, 0);
+  } else if (s->sticky_key_states['4']) {
+    n->checkerboard_shader->disable();
+  } else if (s->sticky_key_states['5']) {
+    n->uv_checkerboard_shader->disable();
   }
 }
 

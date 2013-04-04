@@ -32,6 +32,7 @@ void reshape(int width, int height) {
 void init() {
   glEnable(GL_DEPTH_TEST);
   glEnable(GL_COLOR_MATERIAL);
+  glEnable(GL_TEXTURE_2D);
   glClearAccum(0.0,0.0,0.0,1.0);
   glClear(GL_ACCUM_BUFFER_BIT);
 

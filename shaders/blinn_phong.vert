@@ -5,7 +5,6 @@ void main() {
 
   vec4 v = gl_ModelViewMatrix * gl_Vertex;
 
-  gl_FrontColor = vec4(0.0);
   vec3 light_dir = normalize(gl_LightSource[0].position);
   vec3 light_refl_dir = normalize(reflect(light_dir, normal));
   float diffuse_intensity = max(dot(normal, light_dir), 0);

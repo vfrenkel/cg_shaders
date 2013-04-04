@@ -72,10 +72,10 @@ class GLSLProgram
 
         void load_texture(const char* filename);
     	/*
-         * bind texture with the given name
+         * bind texture
          * \param uint the ID of the texture when using multi-texture
          */
-        void bind_texture(const char* name, GLuint tex, GLenum target, GLint uint);
+        void bind_texture(GLenum target, GLint uint);
 
         void set_uniform_1f(const char* name, GLfloat x);
         void set_uniform_2f(const char* name, GLfloat x, GLfloat y);
@@ -91,6 +91,7 @@ class GLSLProgram
 
     private:
         GLuint      prog_;
+	GLuint texture; //TODO: consider making this a pointer.
 };
 
 #endif

@@ -80,6 +80,7 @@ Scene::Scene() {
   // clear all key states.
   for (int i = 0; i < 256; i++) {
     this->key_states[i] = false;
+    this->sticky_key_states[i] = false;
   }
 
   // clear all mouse button states.

@@ -1,6 +1,9 @@
+#include "SOIL.h"
+
 #include "GLSLProgram.h"
 #include <assert.h>
 #include "utils/macros.h"
+
 
 int GLSLProgram::check_shader(GLuint shader)
 {
@@ -87,25 +90,37 @@ GLuint GLSLProgram::compile_program(
 
 void GLSLProgram::load_texture(const char* filename) {
     GLuint texture;
-    unsigned char * data;
-    FILE * file;
-    
-    //The following code will read in our RAW file
-    file = fopen( filename, “rb” );
-    if ( file == NULL ) return 0;
-    data = (unsigned char *)malloc( width * height * 3 );
-    fread( data, width * height * 3, 1, file );
-    fclose( file );
+    int width, height;
+    unsigned char* image = SOIL_load_image( filename, &width, &height, 0, SOIL_LOAD_RGB );
+
+    glGenTextures(1, &texture);
+    glBindTexture(GL_TEXTURE_2D, texture);
+
+    glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_NEAREST);
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+
+    glTexImage2D( GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
+    gluBuild2DMipmaps(GL_TEXTURE_2D, 3, width, height, GL_RGB, GL_UNSIGNED_BYTE, image);
+
+    free(image);
+
+    this->texture = texture;
+
+    glBindTexture(GL_TEXTURE_2D, 0);
 }
 
-void GLSLProgram::bind_texture(const char* name, GLuint tex, GLenum target, GLint uint)
+void GLSLProgram::bind_texture(GLenum target, GLint uint)
 {
-    GLint loc = glGetUniformLocation(prog_, name);
-    assert(loc >= 0);
+    //GLint loc = glGetUniformLocation(prog_, name);
+    //assert(loc >= 0);
 
     glActiveTexture(GL_TEXTURE0 + uint);
-    glBindTexture(target, tex);
-    glUniform1i(loc, uint);
+    glBindTexture(target, this->texture);
+    //glUniform1i(loc, uint);
 
     glActiveTexture(GL_TEXTURE0);
 }

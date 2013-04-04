@@ -15,6 +15,9 @@ public:
   GLSLProgram *toon_shader;
   GLSLProgram *blinn_phong_shader;
   GLSLProgram *gouraud_phong_shader;
+  GLSLProgram *normal_map_shader;
+  GLSLProgram *checkerboard_shader;
+  GLSLProgram *uv_checkerboard_shader;
 
   PlayerCycler( Scene *scene,
 	        Eigen::Vector4f pos = Eigen::Vector4f(0.0,0.0,0.0,1.0),
